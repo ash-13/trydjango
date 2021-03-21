@@ -26,6 +26,7 @@ urlpatterns = [
     path('', home_view, name='home'),
     path('contact/', contact_view),
     path('admin/', admin.site.urls),
+    path('about/', about_view)
     #path('social/'sc_view)
     #path('contact/',contact_view),
 ]
