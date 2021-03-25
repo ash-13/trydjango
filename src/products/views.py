@@ -24,5 +24,7 @@ def product_create_view(request):
 
     context = {
         'form': form
+
+        
     }
     return render(request, "products/product_create.html", context)
