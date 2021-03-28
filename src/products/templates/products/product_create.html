@@ -2,7 +2,7 @@
 {% block content %}
 
 <form action='.' method='POST'>{% csrf_token %}
-  <input type='text' name='title' placegolder="Your Search"/>
+  {{ form.as_html }}
 <input type='submit' value='Save' />
 </form>
 
