@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Product
-from .forms import ProductForm
+from .forms import ProductForm, RawProductForm
 
 # Create your views here.
 def product_detail_view(request):
@@ -15,13 +15,20 @@ def product_detail_view(request):
     return render(request, "products/product_detail.html", context)
 
 
-
 def product_create_view(request):
+    my_form = RawProductForm()
+    context = {
+        "form" : my_form
+    }
+    return render(request, "products/product_create.html", context)
+
+
+'''def product_create_view(request):
     if request.method == "POST":
         my_new_title = request.POST.get('title')
         print(my_new_title)
     context = {}
-    return render(request, "products/product_create.html", context)
+    return render(request, "products/product_create.html", context)'''
 
 
 
